@@ -15,7 +15,7 @@ const DashBoard = () => {
       setLoading(true);
       setError("");
       const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=ec2d4ffa774b453694d131712253105&q=${search}&days=7&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=ec2d4ffa774b453694d131712253105&q=${search}&days=7&aqi=no&alerts=no`
       );
       const data = await response.json();
       if (!response.ok) {
