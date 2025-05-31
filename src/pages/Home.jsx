@@ -26,8 +26,8 @@ const Home = () => {
       setError("");
       const url =
         typeof query === "string"
-          ? `http://api.weatherapi.com/v1/forecast.json?key=ec2d4ffa774b453694d131712253105&q=${query}&days=7&aqi=no&alerts=no`
-          : `http://api.weatherapi.com/v1/forecast.json?key=ec2d4ffa774b453694d131712253105&q=${query.lat},${query.lon}&days=7&aqi=no&alerts=no`;
+          ? `https://api.weatherapi.com/v1/forecast.json?key=ec2d4ffa774b453694d131712253105&q=${query}&days=7&aqi=no&alerts=no`
+          : `https://api.weatherapi.com/v1/forecast.json?key=ec2d4ffa774b453694d131712253105&q=${query.lat},${query.lon}&days=7&aqi=no&alerts=no`;
       const response = await fetch(url);
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Wrong spelling or no such place");
