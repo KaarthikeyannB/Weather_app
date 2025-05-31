@@ -1,18 +1,19 @@
 export const getBackgroundImage = (weather) => {
+  const base = import.meta.env.BASE_URL || "/";
   switch (weather) {
     case "Clear":
-      return "assets/clear-sky.webp";
+      return `${base}assets/clear-sky.webp`;
     case "Sunny":
-      return "assets/clear-sky.webp";
+      return `${base}assets/clear-sky.webp`;
     case "Partly Cloudy":
-      return "assets/Cloudy.jpg";
+      return `${base}assets/Cloudy.jpg`;
     case "Moderate or heavy rain with thunder":
-      return "assets/rainy.webp";
+      return `${base}assets/rainy.webp`;
     case "Patchy rain nearby":
-      return "assets/rainy.webp";
+      return `${base}assets/rainy.webp`;
     case "Light snow showers":
-      return "assets/snow-images.jpg";
+      return `${base}assets/snow-images.jpg`;
     default:
-      return "assets/default.jpg";
+      return `${base}assets/default.jpg`;
   }
 };
